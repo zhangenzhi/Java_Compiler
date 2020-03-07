@@ -5,17 +5,18 @@ The implementation a compilers for Java-like languages (Joos 1w)
 * [PART III: Type Checking](https://github.com/bochendong/JAVAComplier#part-iii-type-checking)
 * [PART IV: Static Analysis](https://github.com/bochendong/JAVAComplier#part-iv-static-analysis)
 * [PART V: Code Generation](https://github.com/bochendong/JAVAComplier#part-v-code-generation)
-
+* [APPENDIX](https://github.com/bochendong/JAVAComplier#appendix)
+* [Schedule](https://github.com/bochendong/JAVAComplier#schedule)
 ## PART I: Scanning, Parsing, Weeding, AST Building 
 
-The Token stuuct is defined as:
+The Token struct is defined as:
 ```cpp
 struct Token{
     TOKEN_TYPE type;
     std::string lexeme;
 }
 ```
-Where TYPE is enumate in this table:
+Where TYPE is enumerated in this table:
 [TOKEN TYPE](https://github.com/bochendong/JAVAComplier/blob/master/README.md#token-type)
 
 ## PART II: Name Resolution
@@ -26,7 +27,7 @@ Where TYPE is enumate in this table:
 
 ## PART V: Code Generation 
 
-## APPDENIX:
+## APPENDIX:
 #### TOKEN TYPE:
 ```cpp
 enum TOKEN_TYPE{
@@ -87,4 +88,16 @@ enum TOKEN_TYPE{
     NUM,                // a number
     ID                  // a variable
 };
-'''
+```
+## SCHEDULE
+|                | Start date      | Due Date       |
+| :------------- | :-------------: | -------------: |
+| PART I         | March 6         | April 4        |
+| PART II        | April 5         | April 23       |
+| PART III       | April 24        | May 1          |
+| PART IV        | May 2           | May 9          |
+| PART V         | May 9           | June 1         |
+
+#### 1.0.0.1 MARCH 6, 2020
+Create token structure and tokentype
+
