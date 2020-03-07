@@ -13,7 +13,7 @@ The Token struct is defined as:
 ```cpp
 struct Token{
     TOKEN_TYPE type;
-    std::string lexeme;
+    string lexeme;
 }
 ```
 Where TYPE is enumerated in this table:
