@@ -1,5 +1,5 @@
 # JAVAComplier
-The implementation a compilers for Java-like languages (Joos 1w)
+The implementation of a compilers for Java-like languages (Joos 1w)
 * [PART I: Scanning, Parsing, Weeding, AST Building ](https://github.com/bochendong/JAVAComplier#part-i-scanning-parsing-weeding-ast-building)
 * [PART II: Name Resolution](https://github.com/bochendong/JAVAComplier#part-ii-name-resolution)
 * [PART III: Type Checking](https://github.com/bochendong/JAVAComplier#part-iii-type-checking)
