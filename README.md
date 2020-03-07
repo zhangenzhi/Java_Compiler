@@ -6,7 +6,7 @@ The implementation of a compilers for Java-like languages (Joos 1w)
 * [PART IV: Static Analysis](https://github.com/bochendong/JAVAComplier#part-iv-static-analysis)
 * [PART V: Code Generation](https://github.com/bochendong/JAVAComplier#part-v-code-generation)
 * [APPENDIX](https://github.com/bochendong/JAVAComplier#appendix)
-* [Schedule](https://github.com/bochendong/JAVAComplier#schedule)
+* [SCHEDULE](https://github.com/bochendong/JAVAComplier#schedule)
 ## PART I: Scanning, Parsing, Weeding, AST Building 
 
 The Token struct is defined as:
