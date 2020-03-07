@@ -9,12 +9,31 @@ The implementation of a compilers for Java-like languages (Joos 1w)
 * [SCHEDULE](https://github.com/bochendong/JAVAComplier#schedule)
 ## PART I: Scanning, Parsing, Weeding, AST Building 
 
+#### After this part, the following restrictions of the Joos 1W language can be checked:
+* All characters in the input program must be in the range of 7-bit ASCII (0 to 127).
+* Literal is within the range of a Java int.
+* A class cannot be both abstract and final.
+* A method has a body if and only if it is neither abstract nor native.
+* An abstract method cannot be static or final.
+* A static method cannot be final.
+* A native method must be static.
+* The type void may only be used as the return type of a method.
+* A formal parameter of a method must not have an initializer.
+* A class/interface must be declared in a .java file with the same base name as the class/interface.
+* An interface cannot contain fields or constructors.
+* An interface method cannot be static, final, or native.
+* An interface method cannot have a body.
+* Every class must contain at least one explicit constructor.
+* No field can be final.
+* No multidimensional array types or multidimensional array creation expressions are allowed.
+* A method or constructor must not contain explicit this() or super() calls.
+
 The Token struct is defined as:
 ```cpp
 struct Token{
     TOKEN_TYPE type;
     string lexeme;
-}
+};
 ```
 Where TYPE is enumerated in this table:
 [TOKEN TYPE](https://github.com/bochendong/JAVAComplier/blob/master/README.md#token-type)
