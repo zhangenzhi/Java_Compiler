@@ -98,6 +98,6 @@ enum TOKEN_TYPE{
 | PART IV        | May 2           | May 9          |
 | PART V         | May 9           | June 1         |
 
-#### 1.0.0.1 MARCH 6, 2020
+### 1.0.0.1 - Create token MARCH 6, 2020
 Create token structure and tokentype
 
