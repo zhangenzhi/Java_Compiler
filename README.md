@@ -16,7 +16,7 @@ struct Token{
 }
 ```
 Where TYPE is enumate in this table:
-[TOKEN_TYPE](https://github.com/bochendong/JAVAComplier#part-iv-static-analysis)
+[TOKEN TYPE](https://github.com/bochendong/JAVAComplier/blob/master/README.md#token-type)
 
 ## PART II: Name Resolution
 
@@ -27,7 +27,7 @@ Where TYPE is enumate in this table:
 ## PART V: Code Generation 
 
 ## APPDENIX:
-### TOKEN TYPE:
+#### TOKEN TYPE:
 ```cpp
 enum TOKEN_TYPE{
     ABSTRUCT,          // abstruct
