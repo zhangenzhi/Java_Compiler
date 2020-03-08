@@ -19,3 +19,13 @@ int64_t Token::toInt(){
     }
 }
 
+TOKEN_TYPE Token::getType()
+{
+    return this->type;
+}
+
+std::string Token::getString()
+{
+    return this->lexeme;
+}
+

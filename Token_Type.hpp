@@ -7,9 +7,9 @@ enum TOKEN_TYPE{
     
     ABSTRUCT,          // abstruct
     CLASS,             // class
-    EXTERNS,           // extern
+    EXTERN,           // extern
     FINAL,             // final
-    IMPLEMENTS,        // implements
+    IMPLEMENT,        // implement
     IMPORT,            // import
     PACKAGE,           // package
     PROTECTED,         // proctected
@@ -45,7 +45,6 @@ enum TOKEN_TYPE{
     IF,                 // if
     NuLL,               // null
     RETURN,             // return
-    SWITCH,             // swith
     SHORT,              // short
     TrUE,               // true
     THIS,               // this
@@ -79,6 +78,6 @@ enum TOKEN_TYPE{
     INSTANCEOF,         // instanceof
     
     NUM,                // a number
-    ID,                 // a variable
+    ID                  // a variable
 };
 #endif /* Token_Type_hpp */

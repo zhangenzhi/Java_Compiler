@@ -8,10 +8,16 @@
 typedef TOKEN_TYPE TYPE;
 
 struct Token{
-    TYPE type;
-    std::string lexeme;
+    private:
+        TYPE type;
+        std::string lexeme;
+        // std::pair <unsigned int, unsigned int> location;
+    public:
+        int64_t toInt();
+        TYPE getType();
+        std::string getString();
+        // std::pair <unsigned int, unsigned int> getLocation();
     
-    int64_t toInt();
     Token(TYPE type, std::string lexeme): type(type), lexeme(std::move(lexeme)) {}
 };
 
