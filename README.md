@@ -34,7 +34,7 @@ The implementation of a compilers for Java-like languages (Joos 1w)
 * [Weeding](https://github.com/bochendong/JAVAComplier#weeding)
 * [AST Building](https://github.com/bochendong/JAVAComplier#ast-building)
 
-### Scanning
+### - Scanning
 The Token struct is defined as:
 ```cpp
 struct Token{
@@ -45,11 +45,11 @@ struct Token{
 Where TYPE is enumerated in this table:
 [TOKEN TYPE](https://github.com/bochendong/JAVAComplier/blob/master/README.md#token-type)
 
-### Parsing
+### - Parsing
 
-### Weeding
+### - Weeding
 
-### AST Building
+### - AST Building
 
 ## PART II: Name Resolution
 
