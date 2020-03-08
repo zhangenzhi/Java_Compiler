@@ -43,11 +43,10 @@ struct Token{
     string lexeme;
 };
 ```
-## DFA
-THE DFA graph is showed in this link:[DFA GRAPH](https://github.com/bochendong/JAVAComplier/blob/master/dfa.drawio)
-
 Where TYPE is enumerated in this table:
 [TOKEN TYPE](https://github.com/bochendong/JAVAComplier/blob/master/README.md#token-type)
+## DFA
+THE DFA graph is showed in this link:[DFA GRAPH](https://github.com/bochendong/JAVAComplier/blob/master/dfa.drawio)
 
 ### - Parsing
 
