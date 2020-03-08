@@ -28,6 +28,13 @@ The implementation of a compilers for Java-like languages (Joos 1w)
 * No multidimensional array types or multidimensional array creation expressions are allowed.
 * A method or constructor must not contain explicit this() or super() calls.
 
+#### Part I is consisted by 4 parts:
+* [Scanning](https://github.com/bochendong/JAVAComplier#scanning)
+* [Parsing](https://github.com/bochendong/JAVAComplier#parsing)
+* [Weeding](https://github.com/bochendong/JAVAComplier#weeding)
+* [AST Building](https://github.com/bochendong/JAVAComplier#ast-building)
+
+### Scanning
 The Token struct is defined as:
 ```cpp
 struct Token{
@@ -37,6 +44,12 @@ struct Token{
 ```
 Where TYPE is enumerated in this table:
 [TOKEN TYPE](https://github.com/bochendong/JAVAComplier/blob/master/README.md#token-type)
+
+### Parsing
+
+### Weeding
+
+### AST Building
 
 ## PART II: Name Resolution
 
