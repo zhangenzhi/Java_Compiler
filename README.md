@@ -29,10 +29,10 @@ The implementation of a compilers for Java-like languages (Joos 1w)
 * A method or constructor must not contain explicit this() or super() calls.
 
 #### Part I is consisted by 4 parts:
-* [Scanning](https://github.com/bochendong/JAVAComplier#scanning)
-* [Parsing](https://github.com/bochendong/JAVAComplier#parsing)
-* [Weeding](https://github.com/bochendong/JAVAComplier#weeding)
-* [AST Building](https://github.com/bochendong/JAVAComplier#ast-building)
+* [Scanning](https://github.com/bochendong/JAVAComplier#--scanning)
+* [Parsing](https://github.com/bochendong/JAVAComplier#--parsing)
+* [Weeding](https://github.com/bochendong/JAVAComplier#--weeding)
+* [AST Building](https://github.com/bochendong/JAVAComplier#--ast-building)
 
 ### - Scanning
 The Token struct is defined as:
