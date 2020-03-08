@@ -35,6 +35,7 @@ The implementation of a compilers for Java-like languages (Joos 1w)
 * A method or constructor must not contain explicit this() or super() calls.
 
 ### - Scanning
+#### Token
 The Token struct is defined as:
 ```cpp
 struct Token{
@@ -42,6 +43,9 @@ struct Token{
     string lexeme;
 };
 ```
+## DFA
+THE DFA graph is showed in this link:[DFA GRAPH](https://github.com/bochendong/JAVAComplier/blob/master/dfa.drawio)
+
 Where TYPE is enumerated in this table:
 [TOKEN TYPE](https://github.com/bochendong/JAVAComplier/blob/master/README.md#token-type)
 
