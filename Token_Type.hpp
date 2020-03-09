@@ -7,9 +7,9 @@ enum TOKEN_TYPE{
     
     ABSTRUCT,          // abstruct
     CLASS,             // class
-    EXTERN,           // extern
+    EXTERN,            // extern
     FINAL,             // final
-    IMPLEMENT,        // implement
+    IMPLEMENT,         // implement
     IMPORT,            // import
     PACKAGE,           // package
     PROTECTED,         // proctected
@@ -49,12 +49,15 @@ enum TOKEN_TYPE{
     TrUE,               // true
     THIS,               // this
     WHILE,              // while
-
-    AMPERSAND,          // &
-    VERTICAL_BAR,       // |
+    TILDE,              // ~
+    DOUBLEQUOTE,        // "
+    AMP,                // &
+    VERBAR,             // |
     AND,                // &&
     OR,                 // ||
-    
+    LSQUAREBASKET,      // [
+    RSQUAREBASKET,      // ]
+    ASSIGNMENT,         // =
     LT,                 // <
     GT,                 // >
     NE,                 // !=
@@ -62,12 +65,26 @@ enum TOKEN_TYPE{
     GE,                 // >=
     EQ,                 // ==
     
+    MINUSEQUAL,         // -=
+    PLUSEQUAL,          // +=
+    STAREQUAL,          // *=
+    PRECENTEQYUAL,      // %=
+    SLASHEQUAL,         // /=
+    LAREACOMMENT,       // /*
+    RAREACOMMENT,       // */
+    ARROW,              // ->
+    DOUBLEPLUS,         // ++
+    DOUBLEMINUS,        // --
+    COMMENT,            // //
+    
+    
     PLUS,               // +
     MINUS,              // -
     STAR,               // *
     PRECENT,            // %
     
-    
+    LPAREN,             // (
+    RPAREN,             // )
     LBRACE,             // {
     RBRACE,             // }
     
