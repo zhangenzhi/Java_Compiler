@@ -45,7 +45,37 @@ struct Token{
 ```
 Where TYPE is enumerated in this table:
 [TOKEN TYPE](https://github.com/bochendong/JAVAComplier/blob/master/README.md#token-type)
-#### 2. DFA
+
+And a overide output function is implemented, for example:
+```cpp
+Token * t = new Token(AMP,"&");
+cout << *t <<endl;
+
+// Output: ( AMP, & )
+```
+#### 2. Prefix tire
+A prefix tire is created which contians all keywords in joos1w, it has the following structure:
+```cpp
+struct Node{
+    std::vector <Node *> node_list;
+    std::string State;
+    
+    Node(std::string state){ State = state;}
+    void insert_Node(char c, std::string state);
+};
+
+struct Root{
+    Node * root;
+    
+    Root(){
+        root = new Node ("START");
+        for (int i = 0; i < 128; i ++) root->node_list.push_back(new Node("INVAILD"));
+    }
+    void Build(std::vector <std::string> words);
+};
+```
+And this prefix tire contains any vaild path leads to a vaild keyword.
+#### 3. DFA
 THE DFA graph is showed in this link:[DFA GRAPH](https://github.com/bochendong/JAVAComplier/blob/master/dfa.drawio)
 
 ### - Parsing
@@ -135,4 +165,27 @@ enum TOKEN_TYPE{
 
 ### 1.0.0.1 - Create token MARCH 6, 2020
 Create token structure and tokentype
+### 1.0.0.2 - Create DFA structure MARCH 7, 2020
+Create superclass and add previate field and public function for DFA.
 
+Create a prefix tire structure
+### 1.0.0.4 - Create OperatorDFA structure MARCH 8, 2020
+Create a subclass of DFA which is called opreate_DFA, this DFA can recognize tokens as follows:
+```cpp
+/*
+1. Separators
+    ( ) { } [ ] ; , .  ::
+2. Operator:
+    ~ : =  >  <  !  +  -  *  /  &  |   %
+        == >= <= != += -= *= /= &= |=  %= \
+                ++ --           && ||
+                   ->
+3. " '
+4. \* \\ * /
+5. Identifiers:
+    Has pattern {&,_,A-Z,a-z}.* + {&,_,A-Z,a-z,0-9}.*
+6. Integer Numbers:
+    Has pattern {0-9}.*
+*/
+```
+### 1.0.0.3 - Add overide output function for token MARCH 9, 2020
