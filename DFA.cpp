@@ -3,9 +3,10 @@
 using namespace std;
 void Node::insert_Node(char c, std::string state){
        if (node_list.empty()){
-           for (int i = 0; i < 128; i ++) node_list.push_back(new Node("INVAILD"));
+           for (int i = 0; i < 128; i ++) node_list.push_back(new Node("INVALID"));
+           node_list[c]->State = state;
        } else {
-           if (node_list[c]->State == "INVAILD"){
+           if (node_list[c]->State == "TOUCHED"){
                node_list[c] = new Node(state);
            }
        }
@@ -23,11 +24,22 @@ void DFARoot::Build(vector<string> words){
         
         unsigned long int len = word.length();
         for (unsigned long int i = 0; i < len ; i++){
+            
+            if(i == len-1){
+                char c = word[i];
+                cout << "insert " << c << endl;
+                curnode->insert_Node(c, "VALID");
+                curnode = curnode->node_list[c];
+                for (int i = 0; i < 128; i ++) curnode->node_list.push_back(new Node("INVALID"));
+                break;
+            }
+            
             char c = word[i];
             cout << "insert " << c << endl;
-            curnode->insert_Node(c, "Touched");
+            curnode->insert_Node(c, "TOUCHED");
             curnode = curnode->node_list[c];
         }
+        
     }
 }
 

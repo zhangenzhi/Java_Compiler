@@ -11,19 +11,23 @@ using namespace std;
 
 
 
-void words_DFA::checkState(std::string s)
+string words_DFA::checkState(std::string s)
 {
     Node* current_node = root->root;
+    string state = current_node->State;
     
     for(int i=0;i!=s.size();i++){
         char c = s[i];
+        cout<<state<<endl;
         cout<<"check："<<c<<endl;
+        state = current_node->node_list[c]->State;
         
-        if (current_node->node_list[c]->State == "INVALID") {
+        if (state == "INVALID") {
             cout<<"INVALID"<<endl;
-            break;
+            return state;
         }
         current_node = current_node->node_list[c];
     }
-    cout<<"VALID"<<endl;
+    cout<<"VALID or TOUCHED:"<<state<<endl;
+    return state;
 }

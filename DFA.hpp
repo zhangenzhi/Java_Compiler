@@ -26,9 +26,9 @@ struct DFARoot{
     
     DFARoot(){
         root = new Node ("START");
-        for (int i = 0; i < 128; i ++) {
-            root->node_list.push_back(new Node("INVAILD"));
-        }
+//        for (int i = 0; i < 128; i ++) {
+//            root->node_list.push_back(new Node("INVAILD"));
+//        }
     }
     void Build(std::vector <std::string> words);
 };
@@ -41,7 +41,6 @@ bool single_char_op (char c);
 struct DFA{
     
     DFARoot * root;
-    std::vector <Token *> tokens;
     
     DFA(){};
     DFA(std::vector<std::string> words){Build(words);};

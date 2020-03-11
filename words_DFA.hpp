@@ -14,11 +14,11 @@
 
 struct words_DFA : public DFA
 {
-    DFARoot * root;
+    std::vector <Token *> tokens;
     
-    words_DFA(std::vector<std::string> words){DFARoot r;r.Build(words);root=&r;};
+    words_DFA(std::vector<std::string> words){root = new DFARoot();root->Build(words);};
     
-    void checkState(std::string s);
+    std::string checkState(std::string s);
 };
 
 #endif /* words_DFA_hpp */
