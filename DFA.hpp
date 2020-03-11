@@ -18,12 +18,13 @@ struct Node{
     }
     
     void insert_Node(char c, std::string state);
+    std::string check_node_list(char c);
 };
 
-struct Root{
+struct DFARoot{
     Node * root;
     
-    Root(){
+    DFARoot(){
         root = new Node ("START");
         for (int i = 0; i < 128; i ++) {
             root->node_list.push_back(new Node("INVAILD"));
@@ -36,13 +37,17 @@ struct Root{
 bool is_NUM (char c);
 bool is_ALPHA (char c);
 bool single_char_op (char c);
+
 struct DFA{
-    Root * root;
+    
+    DFARoot * root;
     std::vector <Token *> tokens;
     
-    void Build(std::vector <std::string> words);
+    DFA(){};
+    DFA(std::vector<std::string> words){Build(words);};
     
-    virtual void checkState (std::string s); // this could return a vector as: <num,minus,num>
+    void Build(std::vector <std::string> words){DFARoot r;r.Build(words);root = &r;};
+
 };
 
 struct opreate_DFA : public DFA{

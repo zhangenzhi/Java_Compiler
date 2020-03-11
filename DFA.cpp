@@ -10,8 +10,12 @@ void Node::insert_Node(char c, std::string state){
            }
        }
    }
+//std::string Node::check_node_list(std::string s){
+//    std::string checked_state;
+//    
+//}
 
-void Root::Build(vector<string> words){
+void DFARoot::Build(vector<string> words){
     while (!words.empty()){
         Node * curnode = root;
         string word = words.back();
