@@ -6,26 +6,22 @@ void Node::insert_Node(char c, std::string state){
            for (int i = 0; i < 128; i ++) node_list.push_back(new Node("INVALID"));
            node_list[c]->State = state;
        } else {
-           if (node_list[c]->State == "TOUCHED"){
+           if (node_list[c]->State == "INVALID"){
                node_list[c] = new Node(state);
            }
        }
-   }
-//std::string Node::check_node_list(std::string s){
-//    std::string checked_state;
-//    
-//}
+}
 
 void DFARoot::Build(vector<string> words){
     while (!words.empty()){
         Node * curnode = root;
+        cout<<curnode->State<<endl;
         string word = words.back();
         words.pop_back();
         
-        unsigned long int len = word.length();
-        for (unsigned long int i = 0; i < len ; i++){
+        for (unsigned long int i = 0; i < word.length() ; i++){
             
-            if(i == len-1){
+            if(i == word.length()-1){
                 char c = word[i];
                 cout << "insert " << c << endl;
                 curnode->insert_Node(c, "VALID");

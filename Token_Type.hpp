@@ -15,6 +15,7 @@ enum TOKEN_TYPE{
     PROTECTED,         // proctected
     PUBLIC,            // public
     STATIC,            // static
+    MAIN,              // main
     
     // punctuation marks
     
